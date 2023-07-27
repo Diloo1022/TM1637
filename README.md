@@ -1,9 +1,8 @@
 # TM1637
 開發環境:Cortex A9(Samsung 4412)嵌入式系統
-
+************************************************************************
 tm1637.c
-是驅動程式，有file operations 提供 user space 來控制 TM1637 4位元顯示器
-主要是使用 unlocked_ioctl 來提供控制裝置的功能
+是驅動程式，有file operations 提供 user space 來控制 TM1637 4位元顯示器，主要是使用 unlocked_ioctl 來提供控制裝置的功能。
 
 unlocked_ioctl 中的功能有:
 1. DISPLAY_NUMBER: 指定要顯示的4位數字
@@ -14,6 +13,7 @@ unlocked_ioctl 中的功能有:
 ************************************************************************
 TM_test.c
 是在 user space 的程式，利用 driver 提供的 file operations ，來實現進一步的功能
+
 能選擇的功能有:
 1. 顯示指定的4位數字
 2. 設定亮度
